@@ -2,7 +2,7 @@
 body {
     font-family: "Sour Gummy", sans-serif;
     display: flex;
-    background-image: url("1.png");
+    background-image: url("./Images_Contact_Us_CSS/background.png");
     justify-content: center;
     align-items: center;
     height: 100vh;
