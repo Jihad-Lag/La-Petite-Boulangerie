@@ -202,7 +202,9 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-
+body{
+    margin-top: -130px;
+}
     .nav-left,
     .notcart {
         display: none;

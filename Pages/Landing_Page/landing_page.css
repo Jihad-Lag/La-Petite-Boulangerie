@@ -422,16 +422,19 @@ body {
     }
 
     .about-text {
+        margin-top: 30px;
         max-width: 90%;
     }
 
     .about-section img,
     .about-section-reverse img {
-        width: 100%;
-        height: auto;
+        width: 80%;
+        height: 400px;
     }
 
     .avis-clients {
+        background-repeat: repeat;
+        height: auto;
         padding: 30px 10px;
     }
 
@@ -449,6 +452,8 @@ body {
     }
 
     .our-team {
+        height: 1200px;
+        background-repeat: repeat;
         padding: 30px 10px;
         width: 100%;
     }
