@@ -1,4 +1,4 @@
-/* ---- Designer_Par_Jihad_Laglil --- */
+/* ---- Designed_Par_Jihad_Laglil --- */
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&family=Roboto+Slab:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
@@ -395,24 +395,23 @@ body {
 .contact-map {
     width: 50%;
 }
-/* ---- Version_mobile_Created_By_Chatgpt ---- */
+/* ---- Version_mobile_Designed_By_Jihad_Laglil---- */
 @media (max-width: 768px) {
-    body {
-        padding-top: 20px;
+    body{
+        margin: 10px;
     }
-
     .hero {
-        padding: 30px;
-        margin-top: -50px;
+        margin-top: auto;
+        height: auto;
     }
 
     .hero-text {
-        width: 80%;
-        font-size: 18px;
+        width: 90%;
+        font-size: 4px;
     }
 
     .hero-text h4 {
-        font-size: 36px;
+        font-size: 18px;
     }
 
     .about-section,
