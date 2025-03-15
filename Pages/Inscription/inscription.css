@@ -1,7 +1,22 @@
-/* --- Style général --- */
+/* --- Designed_By_Amine_Balla --- */
+/* --- Redesigned_By_Jihad_laglil --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&family=Roboto+Slab:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     font-family: "Sour Gummy", sans-serif;
-    background-image: url("1.png");
+    background-image: url("./Images_Insicription_CSS/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat repeat;
+    height: 100vh;
+    padding-top: 10px;
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +25,6 @@ body {
     color: #333;
 }
 
-/* --- Conteneur principal --- */
 .auth-container {
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -20,23 +34,21 @@ body {
     text-align: center;
 }
 
-/* --- En-tête du formulaire --- */
 .auth-header {
     margin-bottom: 30px;
 }
 
 .auth-header h2 {
     font-size: 2rem;
-    color: #2c3e50;
+    color: #ca8205;
     margin-bottom: 10px;
 }
 
 .auth-header p {
-    color: #7f8c8d;
-    font-size: 0.9rem;
+    color: #000000;
+    font-size: 24px;
 }
 
-/* --- Groupe de champs --- */
 .input-group {
     margin-bottom: 20px;
 }
@@ -50,7 +62,7 @@ body {
 .input-icon i {
     position: absolute;
     left: 15px;
-    color: #7f8c8d;
+    color: #7a4b09;
     font-size: 1rem;
 }
 
@@ -60,22 +72,32 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    color: #333;
+    color: #000000;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .input-icon input:focus {
-    border-color: #3498db;
+    border-color: #f9b924;
     box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
     outline: none;
 }
 
-/* --- Bouton de connexion --- */
+
 .auth-button {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat repeat;
+    padding-top: 10px;
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
     width: 100%;
     padding: 12px;
-    background: #3498db;
-    color: white;
+    background: #dc9110;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 8px;
     font-size: 1rem;
@@ -84,10 +106,8 @@ body {
 }
 
 .auth-button:hover {
-    background: #2980b9;
+    background: #eeb451;
 }
-
-/* --- Lien d'inscription --- */
 .auth-link {
     margin-top: 20px;
     color: #7f8c8d;
@@ -95,7 +115,7 @@ body {
 }
 
 .auth-link a {
-    color: #3498db;
+    color: #845a06;
     text-decoration: none;
     transition: color 0.3s ease;
 }
