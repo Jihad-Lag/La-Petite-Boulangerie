@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effet de défilement des images</title>
+    <link rel="stylesheet" href="./Design_De_CSS/acceuil.css">
+    <link rel="stylesheet" href="./Design_De_CSS/Navigation_Bar_&_Footer.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="toggle-big toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="nav-left">
+                <ul class="links">
+                    <li><a href="#">Nos produits</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    
+                </ul>
+            </div>
+            </div>
+            <div class="nav-center">
+                <img src="./Images_Nos_Produits/./Pages/Landing_Page/Images_For_JS_Animations/Logo_Bakery_Full.PNG" alt="logo" class="nav-logo-full logo" />
+            </div>
+            <div class="nav-right">
+                <a href="#"><button class="action_btn notcart">Commander</button></a>
+                <a href="#" class="nav-icon notcart"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="#000000" viewBox="0 0 256 256">
+                        <path
+                            d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="nav-icon notcart"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="#000000" viewBox="0 0 256 256">
+                        <path
+                            d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="nav-icon cart"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="#000000" viewBox="0 0 256 256">
+                        <path
+                            d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z">
+                        </path>
+                    </svg></a>
+            </div>
+        </nav>
+        <nav class="navbar-sticky">
+            <div class="toggle-sticky toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z">
+                    </path>
+                </svg>
+            </div>
+            <div class="nav-left">
+                <ul class="links">
+                    <li><a href="#">Nos produits</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-center mini">
+                <img src="./Images_Nos_Produits/./Pages/Landing_Page/Images_For_JS_Animations/Logo_Bakery_Mini.png" alt="logo" class="nav-logo-mini logo" />
+            </div>
+            <div class="nav-right">
+                <a href="#"><button class="action_btn notcart">Commander</button></a>
+                <a href="#" class="nav-icon notcart"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="#000000" viewBox="0 0 256 256">
+                        <path
+                            d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="nav-icon notcart"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="#000000" viewBox="0 0 256 256">
+                        <path
+                            d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z">
+                        </path>
+                    </svg></a>
+                <a href="#" class="nav-icon cart"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="#000000" viewBox="0 0 256 256">
+                        <path
+                            d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z">
+                        </path>
+                    </svg></a>
+            </div>
+        </nav>
+        <div class="dropdown_menu open">
+            <li><a href="#">Nos produits</a></li>
+            <li><a href="#">À propos</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Nos magasins</a></li>
+            <li><a href="#">S'inscrire</a></li>
+            <a href="#"><button class="action_btn">Commander</button></a>
+        </div>
+    </header>
+    <div class="nav-center">
+        <div class="half-circle"></div>
+
+    <!-- Nouvelle barre de navigation pour les catégories -->
+    <nav class="category-nav">
+        <ul class="nav-list">
+            <li><a href="acceuil.html">Tous les produits</a></li>
+            <li><a href="sale.html">Salé</a></li>
+            <li><a href="patisserie.html">Pâtisserie</a></li>
+            <li><a href="dessert.html">Dessert</a></li>
+            <li><a href="traditionelle.html">Traditionelle</a></li>
+            <li><a href="viennoiserie.html">Viennoiserie</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="title_subtitle">
+        <h1>Nos Produits</h1>
+        <h4>🥐 Découvrez l’authenticité de notre petite boulangerie ! 🍞✨</h4>
+        <p class="subtitle-2">Nous préparons chaque jour des pains croustillants, des viennoiseries dorées et des pâtisseries artisanales, faits avec <br> amour et des ingrédients de qualité. Venez savourer le goût du fait <br> maison et partagez un moment gourmand avec nous ! 😋</p>
+
+    </div>
+    <div class="container">
+        <div class="image" data-name="Qashtota Fraise" data-tag="Dessert" data-price="25">
+            <img src="./Images_Nos_Produits/Qashtota Fraise.png" class="product-image">
+        </div>
+        <div class="image" data-name="Qashtota Pistachio" data-tag="Dessert" data-price="25">
+            <img src="./Images_Nos_Produits/Qashtota Pistachio.png" class="product-image">
+        </div>
+        <div class="image" data-name="Qashtota Mango" data-tag="Dessert" data-price="25">
+            <img src="./Images_Nos_Produits/Qashtota Mango.png" class="product-image">
+        </div>
+        <div class="image" data-name="Qashtota kunafa Amlou" data-tag="Dessert" data-price="25">
+            <img src="./Images_Nos_Produits/Qashtota kunafa Amlou.png" class="product-image">
+        </div>
+        <div class="image" data-name="Koukou Dubai" data-tag="Dessert" data-price="25">
+            <img src="./Images_Nos_Produits/Koukou Dubai.png" class="product-image">
+        </div>
+        <div class="image" data-name="Qashtota Oreo chocolat" data-tag="Dessert" data-price="25">
+            <img src="./Images_Nos_Produits/Qashtota Oreo chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Qashtota Lotus" data-tag="Dessert" data-price="25">
+            <img src="./Images_Nos_Produits/Qashtota Lotus.png" class="product-image">
+        </div>
+        <div class="image" data-name="Papillon Sucre" data-tag="Viennoiserie" data-price="6">
+            <img src="./Images_Nos_Produits/Papillon Sucre.png" class="product-image">
+        </div>
+        <div class="image" data-name="Fougasse aux olives" data-tag="Salé" data-price="5">
+            <img src="./Images_Nos_Produits/Fougasse aux olives.png" class="product-image">
+        </div>
+        <div class="image" data-name="Mini Batbout « chehma »" data-tag="Traditionelle" data-price="6">
+            <img src="./Images_Nos_Produits/Mini Batbout « chehma ».png" class="product-image">
+        </div>
+        <div class="image" data-name="Millefeuilles Vanille" data-tag="Patisserie" data-price="10">
+            <img src="./Images_Nos_Produits/Millefeuilles Vanille.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tranche Red Velvet" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tranche Red Velvet.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tranche Chocolat" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tranche Chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tranche Oreo" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tranche Oreo.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tranche Fruit Vanille" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tranche Fruit Vanille.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tranche Croquant" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tranche Croquant.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tranche Citron" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tranche Citron.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Oreo" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Cake Oreo.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Nougat" data-tag="Patisserie" data-price="16">
+            <img src="./Images_Nos_Produits/Cake Nougat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Fruit" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Cake Fruit.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Lotus" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Cake Lotus.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Ananas Caramel" data-tag="Patisserie" data-price="18">
+            <img src="./Images_Nos_Produits/Cake Ananas Caramel.png" class="product-image">
+        </div>
+        <div class="image" data-name="Red Velvet" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Red Velvet.png" class="product-image">
+        </div>
+        <div class="image" data-name="Mini chocolate kunafa Pistachio" data-tag="Patisserie" data-price="10">
+            <img src="./Images_Nos_Produits/Mini chocolate kunafa Pistachio.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tablet chocolate kaab el ghazal" data-tag="Patisserie" data-price="85">
+            <img src="./Images_Nos_Produits/Tablet chocolate kaab el ghazal.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tablet chocolate kunafa Amlou" data-tag="Patisserie" data-price="75">
+            <img src="./Images_Nos_Produits/Tablet chocolate kunafa Amlou.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tablet chocolate kunafa Pistachio" data-tag="Patisserie" data-price="75">
+            <img src="./Images_Nos_Produits/Tablet chocolate kunafa Pistachio.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tarte aux amandes" data-tag="Patisserie" data-price="12">
+            <img src="./Images_Nos_Produits/Tarte aux amandes.png" class="product-image">
+        </div>
+        <div class="image" data-name="Muffins" data-tag="Patisserie" data-price="3.5">
+            <img src="./Images_Nos_Produits/Muffins.png" class="product-image">
+        </div>
+        <div class="image" data-name="Muffins au chocolat" data-tag="Patisserie" data-price="4">
+            <img src="./Images_Nos_Produits/Muffins au chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Petit pain aux Céréales" data-tag="Viennoiserie" data-price="2.5">
+            <img src="./Images_Nos_Produits/Petit pain aux Céréales.png" class="product-image">
+        </div>
+        <div class="image" data-name="Croissant Fourre Amandes" data-tag="Viennoiserie" data-price="8">
+            <img src="./Images_Nos_Produits/Croissant Fourre Amandes.png" class="product-image">
+        </div>
+        <div class="image" data-name="Croissant fourre" data-tag="Viennoiserie" data-price="1.5">
+            <img src="./Images_Nos_Produits/Croissant fourre.png" class="product-image">
+        </div>
+        <div class="image" data-name="Petit pain cacao au chocolat" data-tag="Viennoiserie" data-price="2.5">
+            <img src="./Images_Nos_Produits/Petit pain cacao au chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Croissant fourre au chocolat" data-tag="Viennoiserie" data-price="2">
+            <img src="./Images_Nos_Produits/Croissant fourre au chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Petit pain au chocolat" data-tag="Viennoiserie" data-price="1.5">
+            <img src="./Images_Nos_Produits/Petit pain au chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Schneck" data-tag="Viennoiserie" data-price="2">
+            <img src="./Images_Nos_Produits/Schneck.png" class="product-image">
+        </div>
+        <div class="image" data-name="Pain suisse" data-tag="Viennoiserie" data-price="2">
+            <img src="./Images_Nos_Produits/Pain suisse.png" class="product-image">
+        </div>
+        <div class="image" data-name="sandwich Au Nuggets" data-tag="Salé" data-price="15">
+            <img src="./Images_Nos_Produits/sandwich Au Nuggets.png" class="product-image">
+        </div>
+        <div class="image" data-name="sandwich Au Thon" data-tag="Salé" data-price="15">
+            <img src="./Images_Nos_Produits/sandwich Au Thon.png" class="product-image">
+        </div>
+        <div class="image" data-name="Madeleines au Chocolat" data-tag="Patisserie" data-price="3">
+            <img src="./Images_Nos_Produits/Madeleines au Chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tarte Chocolat" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tarte Chocolat.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tarte au Fruit" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tarte au Fruit.png" class="product-image">
+        </div>
+        <div class="image" data-name="Tarte aux amandes" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Tarte aux amandes.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cheesecake Oreo" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Cheesecake Oreo.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cheesecake Framboise" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Cheesecake Framboise.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cheesecake Citron" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Cheesecake Citron.png" class="product-image">
+        </div>
+        <div class="image" data-name="Brownie" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Brownie.png" class="product-image">
+        </div>
+        <div class="image" data-name="Kunafa" data-tag="Patisserie" data-price="12">
+            <img src="./Images_Nos_Produits/Kunafa.png" class="product-image">
+        </div>
+        <div class="image" data-name="Boite 12 Macarons aux amandes" data-tag="Patisserie" data-price="55">
+            <img src="./Images_Nos_Produits/Boite 12 Macarons aux amandes.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Moule ( Grande model )" data-tag="Patisserie" data-price="25">
+            <img src="./Images_Nos_Produits/Cake Moule ( Grande model ).png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Moule ( Moyenne model )" data-tag="Patisserie" data-price="20">
+            <img src="./Images_Nos_Produits/Cake Moule ( Moyenne model ).png" class="product-image">
+        </div>
+        <div class="image" data-name="Cake Moule ( Petit model )" data-tag="Patisserie" data-price="15">
+            <img src="./Images_Nos_Produits/Cake Moule ( Petit model ).png" class="product-image">
+        </div>
+        <div class="image" data-name="Crepes chocolate" data-tag="Patisserie" data-price="5">
+            <img src="./Images_Nos_Produits/Crepes chocolate.png" class="product-image">
+        </div>
+        <div class="image" data-name="Sellou  sfouf Royal" data-tag="Traditionelle" data-price="150">
+            <img src="./Images_Nos_Produits/Sellou  sfouf Royal.png" class="product-image">
+        </div>
+        
+        <div class="image" data-name="Bouchnikha" data-tag="Traditionelle" data-price="80">
+            <img src="./Images_Nos_Produits/Bouchnikha.png" class="product-image">
+        </div>
+        <div class="image" data-name="Chebakia Amandes" data-tag="Traditionelle" data-price="120">
+            <img src="./Images_Nos_Produits/Chebakia Amandes.png" class="product-image">
+        </div>
+        <div class="image" data-name="Chebakia sesame" data-tag="Traditionelle" data-price="80">
+            <img src="./Images_Nos_Produits/Chebakia sesame.png" class="product-image">
+        </div>
+        <div class="image" data-name="Harcha Olives" data-tag="Traditionelle" data-price="5">
+            <img src="./Images_Nos_Produits/Harcha Olives.png" class="product-image">
+        </div>
+        <div class="image" data-name="Harcha origin" data-tag="Traditionelle" data-price="3">
+            <img src="./Images_Nos_Produits/Harcha origin.png" class="product-image">
+        </div>
+        <div class="image" data-name="Baghrir origin" data-tag="Traditionelle" data-price="1.5">
+            <img src="./Images_Nos_Produits/Baghrir origin.png" class="product-image">
+        </div>
+        <div class="image" data-name="Msemen Farci" data-tag="Traditionelle" data-price="7">
+            <img src="./Images_Nos_Produits/Msemen Farci.png" class="product-image">
+        </div>
+        <div class="image" data-name="Msemen Traditionnel" data-tag="Traditionelle" data-price="3">
+            <img src="./Images_Nos_Produits/Msemen Traditionnel.png" class="product-image">
+        </div>
+        <div class="image" data-name="Batbout Complet" data-tag="Traditionelle" data-price="5">
+            <img src="./Images_Nos_Produits/Batbout Complet.png" class="product-image">
+        </div>
+        <div class="image" data-name="Batbout traditionelle" data-tag="Traditionelle" data-price="3">
+            <img src="./Images_Nos_Produits/Batbout traditionelle.png" class="product-image">
+        </div>
+        <div class="image" data-name="Mini Batbouts farci" data-tag="Salé" data-price="6">
+            <img src="./Images_Nos_Produits/Mini Batbouts farci.png" class="product-image">
+        </div>
+        <div class="image" data-name="Cigar dinde fumée crispy" data-tag="Salé" data-price="12">
+            <img src="./Images_Nos_Produits/Cigar dinde fumée crispy.png" class="product-image">
+        </div>
+        <div class="image" data-name="briouate poulet salé crispy" data-tag="Salé" data-price="15">
+            <img src="./Images_Nos_Produits/briouate poulet salé crispy.png" class="product-image">
+         </div>
+         <div class="image" data-name="Mini pizza viande hachée" data-tag="Salé" data-price="5">
+             <img src="./Images_Nos_Produits/Mini pizza viande hachée.png" class="product-image">
+         </div>
+         <div class="image" data-name="Mini pizza crevette" data-tag="Salé" data-price="8">
+             <img src="./Images_Nos_Produits/Mini pizza crevette.png" class="product-image">
+         </div>
+         <div class="image" data-name="Mini pizza thon" data-tag="Salé" data-price="5">
+             <img src="./Images_Nos_Produits/Mini pizza thon.png" class="product-image">
+         </div>
+         <div class="image" data-name="Crêpe salée poulet dinde fumée" data-tag="Salé" data-price="12">
+             <img src="./Images_Nos_Produits/Crêpe salée poulet dinde fumée.png" class="product-image">
+         </div>
+         <div class="image" data-name="Quiche aux Dinde fumée" data-tag="Salé" data-price="12">
+             <img src="./Images_Nos_Produits/Quiche aux Dinde fumée.png" class="product-image">
+         </div>
+         <div class="image" data-name="Quiche aux fruits de mer" data-tag="Salé" data-price="12">
+             <img src="./Images_Nos_Produits/Quiche aux fruits de mer.png" class="product-image">
+         </div>
+         <div class="image" data-name="Quiche Epinards Fromage" data-tag="Salé" data-price="12">
+             <img src="./Images_Nos_Produits/Quiche Epinards Fromage.png" class="product-image">
+         </div>
+         <div class="image" data-name="Mini Bastilla Poulet Amande" data-tag="Salé" data-price="12">
+             <img src="./Images_Nos_Produits/Mini Bastilla Poulet Amande.png" class="product-image">
+         </div>
+         <div class="image" data-name="Mini Bastilla Fruits de mer" data-tag="Salé" data-price="16">
+             <img src="./Images_Nos_Produits/Mini Bastilla Fruits de mer.png" class="product-image">       
+         </div>
+        <div id="cart-bar">
+            <h3>🛒 Mon Panier</h3>
+            <ul id="cart-items"></ul>
+            <p id="cart-total">Total: 0 DH</p>
+            <button id="checkout">Commander</button>
+        </div>
+        
+
+        <!-- Formulaire de commande (caché par défaut) -->
+<div id="commander-form" style="display: none;">
+    <div class="form-header">
+        <h3>Informations de commande</h3>
+        <button id="close-form">✕</button> <!-- Bouton "X" pour fermer -->
+    </div>
+    <form id="commande-form">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="adresse">Adresse :</label>
+        <input type="text" id="adresse" name="adresse" required>
+
+        <label for="telephone">Téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Confirmer la commande</button>
+    </form>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-column logo">
+            <img src="./Images_Nos_Produits/./Pages/Landing_Page/Images_For_JS_Animations/Logo_Bakery_Mini.png" alt="Logo"
+                class="footer-logo logo" />
+        </div>
+        <div class="footer-column quick-links">
+            <h3>Liens rapides</h3>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Nos produits</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column cta-links">
+            <h3>Nos services</h3>
+            <ul>
+                <li><a href="#">Commander</a></li>
+                <li><a href="#">Nos magasins</a></li>
+                <li><a href="#">Mon compte</a></li>
+            </ul>
+        </div>
+        <div class="footer-column socials">
+            <h3>Suivez-nous</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Pinterest</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+        <div class="footer-bottom-left">
+            <p>
+                © 2025 La petite boulangerie. Tous droits réservés. |
+                <a href="#">Conditions d'utilisation</a>
+            </p>
+        </div>
+        <div class="footer-bottom-right">
+            <a href="#top" class="back-to-top"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="32"
+                    height="32" fill="#000000" viewBox="0 0 256 256">
+                    <path
+                        d="M205.66,117.66a8,8,0,0,1-11.32,0L136,59.31V216a8,8,0,0,1-16,0V59.31L61.66,117.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0l72,72A8,8,0,0,1,205.66,117.66Z">
+                    </path>
+                </svg>
+                Retour en haut</a>
+        </div>
+    </div>
+</footer>
+
+    <script src="./Animation_De_Js/acceuil.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&family=Roboto+Slab:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* --- Fonts --- */
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    /* Effet glassmorphism */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+}
+
+li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 15px;
+    position: relative;
+}
+
+/* --- Barre de navigation des catégories --- */
+.category-nav {
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background for glassmorphism */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: sticky;
+    top: 60px; /* Adjust based on your main nav height */
+    z-index: 999;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* Sticky state for the category nav */
+.category-nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* --- Liste des catégories --- */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the items */
+    gap: 15px; /* Reduced gap for a tighter layout */
+}
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #5C4033; /* Dark brown color to match the text in the photo */
+    font-weight: 500; /* Medium weight for readability */
+    font-size: 1.1rem; /* Slightly smaller font size */
+    padding: 8px 20px; /* Padding to create a button-like shape */
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    border-radius: 25px; /* Fully rounded edges for a pill shape */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nav-list a:hover {
+    background: rgba(255, 255, 255, 0.8); /* Slightly more opaque on hover */
+    color: #3C2F2F; /* Darker shade on hover */
+}
+.content {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.hvr-underline-reveal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-reveal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFD700;
+    height: 4px;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-reveal:hover:before,
+.hvr-underline-reveal:focus:before,
+.hvr-underline-reveal:active:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #af8558;
+    color: white;
+    padding: 20px 10px;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    position: relative;
+    margin-top: auto; /* Garde le footer en bas */
+}
+
+/* --- Conteneur du footer --- */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    flex-wrap: wrap; /* Ajuste l'affichage sur petits écrans */
+}
+
+/* --- Logo --- */
+.footer-logo {
+    max-width: 150px; /* Ajustement pour éviter un logo trop grand */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* --- Texte des horaires --- */
+.Time {
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --- Conteneur des pages + icônes à droite --- */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* --- Liste des pages en colonne --- */
+.Pages {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.Pages li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s ease-in-out;
+}
+
+.Pages li a:hover {
+    color: #FFD700; /* Effet doré au survol */
+}
+
+/* --- Icônes sociales --- */
+.social-icons {
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* --- Texte final --- */
+.final {
+    font-size: 0.9em;
+    margin-top: 15px;
+    opacity: 0.8;
+    text-align: center;
+}

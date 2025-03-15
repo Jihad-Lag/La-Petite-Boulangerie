@@ -1,0 +1,368 @@
+/* ---- Designer_Par_Hossame_Eddine_Aberaich ---  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*::selection{
+    background-color: rgb(207, 170, 101);
+}
+
+.logo::selection{
+    background-color: rgba(240, 248, 255, 0);
+}
+
+header {
+    position: sticky;
+    top: 0; 
+    z-index: 999; 
+    width: 100%;
+    font-weight: 600;
+}
+.navbar, .navbar-sticky{
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 96px;
+    padding: 0px 2.5%;
+    padding-top: 6px;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.navbar{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.navbar-sticky{
+    opacity: 0;
+    transform: translateY(-100%); 
+}
+
+
+.navbar.scrolled {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.navbar-sticky.scrolled{
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.1);
+    top: 0;
+    background-color: #f7f0eb;
+    height: 70px;
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 2;
+}
+
+.links {
+    display: flex;
+    gap: 1.8rem;
+}
+
+li, a{
+    color: #010101;
+    text-decoration: none;
+    list-style: none;
+}
+
+a:hover{
+    color: rgb(220, 143, 0);
+}
+
+.nav-center {
+    margin-top: -10px;
+    margin-left: -140px;
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    position: relative; 
+}
+
+.half-circle {
+    transform: translateX(-50%);
+    width: 280px;
+    height: 120px;
+   margin-right:  -382px; ;
+    background-color: white;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+    
+    transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+}
+
+.half-circle.scrolled {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nav-center.mini{
+    padding-top: 0px;
+}
+
+.nav-logo-full {
+    width: 220px;
+}
+
+.nav-logo-mini {
+    width: 120px; 
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.action_btn{
+    font-family: "Sour Gummy", serif;
+    background-color: #f0ab7a;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.action_btn:hover{
+    background-color: rgb(163, 152, 130);
+    color: #f7f0eb;
+}
+
+.nav-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #000000;
+}
+
+.nav-icon:hover svg {
+    fill: rgb(255, 169, 8);
+}
+.toggle svg {
+    display: none;
+    fill: #594a47;
+}
+.toggle:hover svg{
+    fill: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.dropdown_menu {
+    position: absolute;
+    left: 4rem;
+    top: 70px;
+    width: 90%;
+    max-width: 300px;
+    padding: 0.5rem;
+    background-color: #e1dad747;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    overflow: hidden; 
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, height 1s ease, visibility 0s linear 1s;
+}
+.dropdown_menu.open{
+    opacity: 1;
+    visibility: visible;
+    height: 206px;
+    transition: opacity 1s ease, height 1s ease;
+ }
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1400px) {
+    .navbar, .navbar-sticky, .action_btn{
+        font-size: 1.5rem;
+    }
+    .nav-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+    .nav-logo-full {
+        width: 260px;
+    }
+    
+}
+
+@media (max-width: 770px) {
+    .nav-left , .notcart{
+        display: none;
+    }
+    .toggle svg, .nav-icon.cart svg{
+        display: block;
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media (min-width: 771px) {
+    .dropdown_menu {
+        display: none;
+    }
+}
+
+/* ------ Footer ---- */
+
+.footer {
+    background-color: #f8ebbf68;
+    color: #000000;
+    margin: 0;
+    padding: 40px 20px;
+    font-weight: 500;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+    padding: 0 15px;
+}
+
+.footer-column.logo {
+    flex: 2; 
+    max-width: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.footer-column h3 {
+    text-shadow: 2px 2px 5px rgba(15, 14, 14, 0.234);
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #36270c;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #000000; 
+    text-decoration: none;
+    font-size: 1.1em; 
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #ff9900; 
+}
+
+.footer-logo {
+    max-width: 200px; 
+    height: auto;
+}
+
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: #8b5e34; 
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.footer-bottom-left p {
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.footer-bottom-left a {
+    color: #4a2c1a; 
+    text-decoration: none;
+}
+
+.footer-bottom-left a:hover {
+    color: #000000;
+}
+
+.arrow{
+    padding-top: 20px;
+    width: 15px;
+}
+
+.arrow:hover{
+    color: #4a2c1a;
+}
+.back-to-top {
+    color: #000000; 
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.back-to-top i {
+    margin-right: 5px; 
+}
+
+.back-to-top:hover {
+    color: #4a2c1a; 
+}
+
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 100%; 
+        margin-bottom: 20px;
+    }
+
+    .footer-column.logo {
+        max-width: 100%; 
+        flex: 100%;
+        padding-top: 0; 
+    }
+
+    .footer-column h3 {
+        font-size: 1.3em;
+    }
+
+    .footer-column ul li a {
+        font-size: 1em; 
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom-right {
+        margin-top: 10px;
+    }
+}
