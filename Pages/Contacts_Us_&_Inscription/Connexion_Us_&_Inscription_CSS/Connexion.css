@@ -5,7 +5,7 @@
 
 body {
     font-family: "Sour Gummy", sans-serif;
-    background-image: url("./Images_Insicription_CSS/background.png");
+    background-image: url("../Images_Connexion_Us_&_Inscription_CSS/background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat repeat;
@@ -121,7 +121,7 @@ body {
 }
 
 .auth-link a:hover {
-    color: #2980b9;
+    color: #ffc61a;
 }
 
 
