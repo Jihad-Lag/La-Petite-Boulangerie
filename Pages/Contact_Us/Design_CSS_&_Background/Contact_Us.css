@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&family=Roboto+Slab:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: -20px 20px;
+    background-image: url("./background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Sour Gummy", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.container {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    max-width: 900px;
+    background-image: url("../../Landing_Page/Landing_Page_Images/Background_Css_Images/team_background.png");
+    background-size: cover;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-form h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #7d4b0f;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background: #f9ca5c;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-form button:hover {
+    background: #f6cd6e;
+}
+
+
+.info-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.info-box {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #f6a73f66;
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box {
+        padding: 15px;
+    }
+}
