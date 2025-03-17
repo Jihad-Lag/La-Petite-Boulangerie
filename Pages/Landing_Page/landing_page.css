@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&family=Roboto+Slab:wght@100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    margin: 0 auto;
+    margin: 0 20px;
     background-image: url("./Landing_Page_Images/Background_Css_Images/background.png");
     background-size: cover;
     background-position: center;
@@ -175,10 +175,33 @@ body {
 }
 
 .testimonial p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #444;
-}
+    position: relative;
+    padding: 10px 20px;
+    font-size: 1.1em;
+  }
+  
+  .testimonial p::before,
+  .testimonial p::after {
+    font-size: 3em;
+    color: #cb6b0c; 
+    font-weight: bold;
+    font-family: serif;
+    position: absolute;
+    
+  }
+  
+  .testimonial p::before {
+    content: "“";
+    left: -10px;
+    top: -10px;
+  }
+  
+  .testimonial p::after {
+    content: "”"; 
+    right: -10px;
+    bottom: -10px;
+    
+  }
 
 .testimonial h4 {
     font-size: 20px;
@@ -249,7 +272,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Images des membres*/
+
 .team-member img {
     width: 100%;
     height: auto;
@@ -294,11 +317,12 @@ body {
 
 .reason {
     background: #faf3e0;
-    padding: 25px;
+    padding: 10px;
     border-radius: 12px;
     text-align: center;
     width: 30%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
 }
 
 .reason img {
