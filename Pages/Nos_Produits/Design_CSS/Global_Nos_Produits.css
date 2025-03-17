@@ -384,9 +384,11 @@ a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 20px;
+    
 }
 
 .footer-column {
+    padding: 0px;
     font-family: "Sour Gummy", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -419,6 +421,7 @@ a:hover {
 }
 
 .footer-column ul li {
+    padding: 0;
     margin-bottom: 12px;
 }
 
