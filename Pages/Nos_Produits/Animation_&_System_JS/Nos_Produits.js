@@ -32,10 +32,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     produit.style.display = shouldShow ? 'block' : 'none';
                     
                     if(shouldShow) {
-                        setTimeout(() => {
-                            produit.style.opacity = '1';
-                            produit.style.transform = 'translateY(0)';
-                        }, 50);
+                        produit.style.opacity = '1';
+                        produit.style.transform = 'translateY(0)';
                     }
                 });
 
@@ -166,7 +164,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    
     initFilters();
     initCart();
     updateProductCount(); 
@@ -185,76 +182,81 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("commande-form").addEventListener("submit", function(e) {
         e.preventDefault();
-    
+        // Ajoutez ici la logique pour traiter la commande
     });
-});
 
+    // Gestion du sticky navbar
+    const categoryNav = document.querySelector(".category-nav");
+    const sticky = categoryNav.offsetTop;
 
+    window.onscroll = function() {
+        if (window.pageYOffset >= sticky) {
+            categoryNav.classList.add("sticky");
+        } else {
+            categoryNav.classList.remove("sticky");
+        }
 
-window.onscroll = function() {myFunction()};
+        const navbar = document.querySelector(".navbar");
+        const sticknavbar = document.querySelector(".navbar-sticky");
 
-var categoryNav = document.querySelector(".category-nav");
-var sticky = categoryNav.offsetTop;
-
-function myFunction() {
-    if (window.pageYOffset >= sticky) {
-        categoryNav.classList.add("sticky");
-    } else {
-        categoryNav.classList.remove("sticky");
-    }
-}
-
-
-
-document.addEventListener("DOMContentLoaded", function(){
-    const navbar = document.querySelector(".navbar");
-    const sticknavbar = document.querySelector(".navbar-sticky");
-
-    window.addEventListener("scroll", function() {
-        if (window.scrollY > 1){
+        if (window.scrollY > 1) {
             navbar.classList.add("scrolled");
             sticknavbar.classList.add("scrolled");
         } else {
             navbar.classList.remove("scrolled");
             sticknavbar.classList.remove("scrolled");
-
         }
+    };
+
+    // Gestion du dropdown menu
+    const toggles = document.querySelectorAll('.toggle');
+    const togglesvg1 = document.querySelector('.toggle-big svg path');
+    const togglesvg2 = document.querySelector('.toggle-sticky svg path');
+    const dropdownmenu = document.querySelector('.dropdown_menu');
+
+    dropdownmenu.classList.remove('open');
+
+    toggles.forEach((toggle) => {
+        toggle.onclick = function () {
+            dropdownmenu.classList.toggle('open');
+            const isOpen = dropdownmenu.classList.contains('open');
+        
+            togglesvg1.setAttribute('d', isOpen
+                ? 'M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z'
+                : 'M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z'
+            );
+            togglesvg2.setAttribute('d', isOpen
+                ? 'M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z'
+                : 'M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z'
+            );
+        };
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    const navList = document.querySelector(".nav-list");
 
-const toggles = document.querySelectorAll('.toggle');
-const togglesvg1 = document.querySelector('.toggle-big svg path');
-const togglesvg2 = document.querySelector('.toggle-sticky svg path');
-const dropdownmenu = document.querySelector('.dropdown_menu');
+    let isDragging = false;
+    let startX, scrollLeft;
 
-dropdownmenu.classList.remove('open');
+    navList.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.pageX - navList.offsetLeft;
+        scrollLeft = navList.scrollLeft;
+    });
 
-toggles.forEach((toggle) => {
-    toggle.onclick = function () {
-        dropdownmenu.classList.toggle('open');
-        const isOpen = dropdownmenu.classList.contains('open');
-    
-        togglesvg1.setAttribute('d', isOpen
-            ? 'M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z'
-            : 'M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z'
-        );
-        togglesvg2.setAttribute('d', isOpen
-            ? 'M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z'
-            : 'M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z'
-        );
-    };
-    
+    navList.addEventListener("mouseleave", () => {
+        isDragging = false;
+    });
+
+    navList.addEventListener("mouseup", () => {
+        isDragging = false;
+    });
+
+    navList.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - navList.offsetLeft;
+        const walk = (x - startX) * 2; 
+        navList.scrollLeft = scrollLeft - walk;
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
